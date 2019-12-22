@@ -1,8 +1,8 @@
 {
-  "name": "patsHelpers",
-  "version": "1.0.0",
+  "name": "pat-helpers",
+  "version": "1.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "uglifyjs './dist/**' -o './dist/index.js'",
     "start": "tsc -w",

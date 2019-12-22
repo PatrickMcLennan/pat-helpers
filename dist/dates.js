@@ -40,11 +40,6 @@ function datesAreEqual(firstDate, secondDate) {
         ].toString());
 }
 exports.datesAreEqual = datesAreEqual;
-function dateIsWithinRange(queriedDate, startOfRange, endOfRange) {
-    return (Date.parse(queriedDate.toString()) > Date.parse(startOfRange.toString()) &&
-        Date.parse(queriedDate.toString()) < Date.parse(endOfRange.toString()));
-}
-exports.dateIsWithinRange = dateIsWithinRange;
 function dateIsThisYear(date) {
     return date.getFullYear().toString() === new Date().getFullYear().toString();
 }
@@ -61,11 +56,32 @@ function dateIsThisWeek(date) {
         [today.getFullYear(), moment_1["default"](today).weeks()].toString());
 }
 exports.dateIsThisWeek = dateIsThisWeek;
-function weekdayString(date, abrv) {
-    return exports.weekdays[date.getDay()][abrv ? 1 : 0];
+function dateIsWithinRange(queriedDate, startOfRange, endOfRange) {
+    return (Date.parse(queriedDate.toString()) > Date.parse(startOfRange.toString()) &&
+        Date.parse(queriedDate.toString()) < Date.parse(endOfRange.toString()));
 }
-exports.weekdayString = weekdayString;
+exports.dateIsWithinRange = dateIsWithinRange;
 function monthString(date, abrv) {
     return exports.months[date.getMonth()][abrv ? 1 : 0];
 }
 exports.monthString = monthString;
+function suffixedDate(date) {
+    var dateNumber = date.getDate();
+    if (dateNumber === 1 || dateNumber === 21 || dateNumber === 31) {
+        return dateNumber + "st";
+    }
+    else if (dateNumber === 2 || dateNumber === 22) {
+        return dateNumber + "nd";
+    }
+    else if (dateNumber === 3 || dateNumber === 23) {
+        return dateNumber + "rd";
+    }
+    else {
+        return dateNumber + "th";
+    }
+}
+exports.suffixedDate = suffixedDate;
+function weekdayString(date, abrv) {
+    return exports.weekdays[date.getDay()][abrv ? 1 : 0];
+}
+exports.weekdayString = weekdayString;

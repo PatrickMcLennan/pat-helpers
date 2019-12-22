@@ -1,10 +1,18 @@
 {
   "compilerOptions": {
     "lib": ["es6", "DOM"],
+    "downlevelIteration": true,
     "esModuleInterop": true,
     "outDir": "./dist",
     "removeComments": true
   },
   "include": ["./src/index.ts"],
-  "exclude": ["node_modules", "./src/__tests__", "./src/data", "./src/dates"]
+  "exclude": [
+    "node_modules",
+    "./src/__tests__",
+    "./src/dates.ts",
+    "./src/numbers.ts",
+    "./src/arrays.ts",
+    "./src/strings.ts"
+  ]
 }

@@ -25,7 +25,9 @@ export const months: [string, string][] = [
   ["December", "Dec"]
 ];
 
-// Comparing Dates
+/* * * * * * * * * * * *
+ * - COMPARING DATES - *
+ * * * * * * * * * * * */
 export function datesAreEqual(firstDate: Date, secondDate: Date): boolean {
   return (
     [
@@ -38,17 +40,6 @@ export function datesAreEqual(firstDate: Date, secondDate: Date): boolean {
       secondDate.getMonth(),
       secondDate.getDate()
     ].toString()
-  );
-}
-
-export function dateIsWithinRange(
-  queriedDate: Date,
-  startOfRange: Date,
-  endOfRange: Date
-): boolean {
-  return (
-    Date.parse(queriedDate.toString()) > Date.parse(startOfRange.toString()) &&
-    Date.parse(queriedDate.toString()) < Date.parse(endOfRange.toString())
   );
 }
 
@@ -72,18 +63,38 @@ export function dateIsThisWeek(date: Date): boolean {
   );
 }
 
-// export function dateIsToday(date: Date): boolean {
-//     const today = new Date();
-//     return (
-
-//     )
-// }
-
-// Formatting Dates
-export function weekdayString(date: Date, abrv?: boolean | void): string {
-  return weekdays[date.getDay()][abrv ? 1 : 0];
+export function dateIsWithinRange(
+  queriedDate: Date,
+  startOfRange: Date,
+  endOfRange: Date
+): boolean {
+  return (
+    Date.parse(queriedDate.toString()) > Date.parse(startOfRange.toString()) &&
+    Date.parse(queriedDate.toString()) < Date.parse(endOfRange.toString())
+  );
 }
 
+/* * * * * * * * * * * * *
+ * - FORMATTING DATES -  *
+ * * * * * * * * * * * * */
 export function monthString(date: Date, abrv?: boolean | void): string {
   return months[date.getMonth()][abrv ? 1 : 0];
+}
+
+export function suffixedDate(date: Date): string {
+  const dateNumber: number = date.getDate();
+
+  if (dateNumber === 1 || dateNumber === 21 || dateNumber === 31) {
+    return `${dateNumber}st`;
+  } else if (dateNumber === 2 || dateNumber === 22) {
+    return `${dateNumber}nd`;
+  } else if (dateNumber === 3 || dateNumber === 23) {
+    return `${dateNumber}rd`;
+  } else {
+    return `${dateNumber}th`;
+  }
+}
+
+export function weekdayString(date: Date, abrv?: boolean | void): string {
+  return weekdays[date.getDay()][abrv ? 1 : 0];
 }
