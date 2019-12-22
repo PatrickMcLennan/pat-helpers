@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["es6", "DOM"],
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "removeComments": true
+  },
+  "include": ["./src/index.ts"],
+  "exclude": ["node_modules", "./src/__tests__", "./src/data", "./src/dates"]
+}

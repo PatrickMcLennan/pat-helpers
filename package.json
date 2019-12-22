@@ -1,0 +1,31 @@
+{
+  "name": "patsHelpers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "uglifyjs './dist/**' -o './dist/index.js'",
+    "start": "tsc -w",
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "@types/moment": "^2.13.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^3.7.4",
+    "uglify-js": "^3.7.2"
+  },
+  "dependencies": {
+    "moment": "^2.24.0"
+  },
+  "jest": {
+    "testMatch": [
+      "./src/__tests__/**"
+    ]
+  }
+}
