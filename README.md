@@ -69,6 +69,8 @@ const validDate: boolean = dateIsThisYear(new Date(new Date().setFullYear(new Da
 
 Returns `false`
 
+---
+
 **`dateIsThisMonth`**
 
 1 parameter - `Date` Object.
