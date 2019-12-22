@@ -43,7 +43,7 @@ const validDate: boolean = dateIsThisYear(new Date())
 Returns `true`
 
 ```
-const validDate: boolean = dateIsThisYear(new Date(new Date().setFullYear(new Date().getFullYear() + 1)))
+const validDate: boolean = dateIsThisYear(new Date(new Date().setFullYear(new Date().getFullYear() + 1))) // 1 year from now
 ```
 
 Returns `false`
@@ -61,7 +61,7 @@ const validDate: boolean = dateIsThisMonth(new Date())
 Returns `true`
 
 ```
-const validDate: boolean = dateIsThisMonth(new Date(new Date().setMonth(new Date().getMonth() + 1)))
+const validDate: boolean = dateIsThisMonth(new Date(new Date().setMonth(new Date().getMonth() + 1))) // 1 month from now
 ```
 
 Returns `false`
@@ -79,7 +79,7 @@ const validDate: boolean = dateIsThisWeek(new Date())
 Returns `true`
 
 ```
-const validDate: boolean = dateIsThisWeek(new Date(new Date().setDate(new Date().getDate() + 7)))
+const validDate: boolean = dateIsThisWeek(new Date(new Date().setDate(new Date().getDate() + 7))) // 1 week from now
 ```
 
 Returns `false`
@@ -93,8 +93,8 @@ Returns `false`
 ```
 const validDate: boolean = datesAreWithinRange(
     new Date(),
-    new Date(new Date().setDate(new Date().getDate() - 1)),
-    new Date(new Date().setDate(new Date().getDate() + 1))
+    new Date(new Date().setDate(new Date().getDate() - 1)), // Yesterday
+    new Date(new Date().setDate(new Date().getDate() + 1)) // Tomorrow
 )
 ```
 
@@ -103,8 +103,8 @@ Returns `true`
 ```
 const validDate: boolean = datesAreWithinRange(
     new Date(),
-    new Date(new Date().setDate(new Date().getDate() - 2)),
-    new Date(new Date().setDate(new Date().getDate() - 1))
+    new Date(new Date().setDate(new Date().getDate() - 2)), // 2 days ago
+    new Date(new Date().setDate(new Date().getDate() - 1)) // 1 day ago
 )
 ```
 
@@ -243,7 +243,7 @@ Returns `4`
 
 ```
 const zipped: object[] = zip(
-    [{ name1: '1', age: 1 }, { name: "2", age: 20 }],
+    [{ name1: '1', age: 30 }, { name: "2", age: 20 }],
     [{ ownsDog: false, skier: false }, { ownsDog: true, skier: true }]
 )
 ```
