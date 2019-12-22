@@ -2,7 +2,7 @@
 
 ## D.R.Y - A library of Functions I reach for often, written + tested in TypeScript, compiled to ES5
 
-#### **Index**
+### **Index**
 
 _Ctrl + F abbreviations listed for easier navigation_
 
@@ -11,7 +11,9 @@ _Ctrl + F abbreviations listed for easier navigation_
 - Numbers (ph3)
 - Arrays (ph4)
 
-###### Dates - ph1
+### Dates - ph1
+
+---
 
 **`datesAreEqual`**
 
@@ -22,6 +24,8 @@ Returns `true`.
 `const equalDates: boolean = datesAreEqual(new Date(), new Date(new Date().setDate(new Date().getDate() + 1)))`
 
 Returns `false`.
+
+---
 
 **`dateIsWithinRange`**
 
@@ -43,6 +47,8 @@ Returns `true`
 
 Returns `false`
 
+---
+
 **`dateIsthisYear`**
 1 paramater - `Date` Object.
 `const validDate: boolean = dateIsThisYear(new Date())`
@@ -63,6 +69,8 @@ Returns `true`
 
 Returns `false`
 
+---
+
 **`dateIsThisWeek`**
 1 parameter - `Date` Object.
 `const validDate: boolean = dateIsThisWeek(new Date())`
@@ -72,6 +80,8 @@ Returns `true`
 `const validDate: boolean = dateIsThisWeek(new Date(new Date().setDate(new Date().getDate() + 7)))`
 
 Returns `false`
+
+---
 
 **`weekdayString`**
 2 parameters - `Date` Object, abrv `boolean` (optional).
@@ -84,6 +94,8 @@ Returns 'Sunday', 'Monday', etc.
 
 Returns 'Sun', 'Mon', etc.
 
+---
+
 **`monthString`**
 2 parameters - `Date` Object, abrv `boolean` (optional).
 
@@ -95,7 +107,9 @@ Returns 'January', 'February', etc.
 
 Returns 'Jan', 'Feb', etc.
 
-###### Strings - ph2
+---
+
+### Strings - ph2
 
 **`compareStrings`**
 2 parameters - `String`, `String` . Helpful for filtering search results.
@@ -111,6 +125,8 @@ Returns `true`
 `const sameString: boolean = compareStrings('hello1', 'hello')`
 
 Returns `false`
+
+---
 
 ###### Numbers - ph3
 
