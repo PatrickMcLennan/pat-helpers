@@ -264,3 +264,15 @@ Returns
 **`deepClone`** - Deep clones an object.
 
 1 paramater - `Object`
+
+```
+const person1: object = { name: '1', age: 30 }
+const person2: object = deepClone(person1)
+
+person2['age'] = 50;
+person2['name'] = '2';
+console.log(person1);
+console.log(person2);
+```
+
+Person2 will be `{ name: '2', age: 50 }`, while person1 will remain as `{ name: '1', age: 30 }`
